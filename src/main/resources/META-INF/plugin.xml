@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>org.jvmlet.intellij.reveal-dependency-plugin</id>
     <name>Reveal gradle dependency in external libraries tree.</name>
-    <vendor email="furer.alexander@gmail.com" >jvmlet</vendor>
-
+    <vendor email="furer.alexander@gmail.com" url="https://github.com/jvmlet/reveal-dependency-plugin">jvmlet</vendor>
+    <category>Navigation</category>
     <description><![CDATA[
     Right-click on gradle dependency to navigate to linked external library.
     ]]></description>
