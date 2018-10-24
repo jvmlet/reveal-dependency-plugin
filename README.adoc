@@ -1,3 +1,4 @@
-image:src/docs/asciidoc/images/screenshot_18584.png
 
-image:src/docs/asciidoc/images/usage2.png
+image:src/docs/asciidoc/images/usage.png[ opts="inline"]
+
+image:src/docs/asciidoc/images/usage2.png[ opts="inline"]
