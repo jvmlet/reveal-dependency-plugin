@@ -30,6 +30,6 @@ publishPlugin {
     onlyIf {
         isRelease
     }
-    username JETBRAINS_USERNAME
-    password JETBRAINS_PASSWORD
+    username = JETBRAINS_USERNAME
+    password = JETBRAINS_PASSWORD
 }
