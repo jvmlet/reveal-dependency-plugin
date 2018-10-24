@@ -1,7 +1,10 @@
 = Reveal gradle dependency in external libraries tree.
 
-Right-click on gradle dependency node to navigate to linked external library
+Right-click on gradle dependency node to navigate to linked external library. +
+*Works at any level of dependency hierarchy*
+
+
 image:src/docs/asciidoc/images/usage.png[ opts="inline"]
 
-Works at any level of dependency hierarchy
+
 
