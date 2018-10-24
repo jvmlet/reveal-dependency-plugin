@@ -1,0 +1,1 @@
+image:src/docs/asciidoc/images/screenshot_18584.png[ opts="inline"]
