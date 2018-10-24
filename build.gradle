@@ -27,6 +27,9 @@ patchPluginXml {
 }
 def isRelease  = !(version ==~ /.*SNAPSHOT/)
 publishPlugin {
+    doFirst {
+        println JETBRAINS_USERNAME
+    }
     onlyIf {
         isRelease
     }
