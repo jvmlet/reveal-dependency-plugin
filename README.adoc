@@ -1,4 +1,4 @@
-= IntelliJ Idea plugin to reveal gradle dependency in external libraries tree.
+= IntelliJ Idea plugin to reveal gradle dependency in external libraries tree. image:https://travis-ci.org/jvmlet/reveal-dependency-plugin.svg?branch=master[Build Status,link=https://travis-ci.org/jvmlet/reveal-dependency-plugin]
 :icons: font
 
 Right-click on gradle dependency node to navigate to linked external library. +
