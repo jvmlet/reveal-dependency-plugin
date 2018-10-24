@@ -12,5 +12,7 @@ before_install:
 after_success:
 #- "[[ ${TRAVIS_PULL_REQUEST} == 'false' ]] && [[ ${TRAVIS_BRANCH} == 'master' ]] && [[ ${TRAVIS_TAG} == '' ]] && ./gradlew uploadArchives"
 - ./gradlew publishPlugin
+before_script:
+  - chmod +x gradlew
 script:
-- ./gradlew check
+  - ./gradlew check
