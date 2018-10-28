@@ -1,5 +1,8 @@
-= IntelliJ Idea plugin to reveal gradle dependency in external libraries tree. image:https://travis-ci.org/jvmlet/reveal-dependency-plugin.svg?branch=master[Build Status,link=https://travis-ci.org/jvmlet/reveal-dependency-plugin]
+= IntelliJ Idea plugin to reveal gradle dependency in external libraries tree.
 :icons: font
+
+image:https://travis-ci.org/jvmlet/reveal-dependency-plugin.svg?branch=master[Build Status,link=https://travis-ci.org/jvmlet/reveal-dependency-plugin]
+image:https://img.shields.io/jetbrains/plugin/d/11236.svg["JetBrains IntelliJ plugins",link="https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-"]
 
 Right-click on gradle dependency node to navigate to linked external library. +
 *Works at any level of dependency hierarchy*
@@ -8,6 +11,6 @@ Right-click on gradle dependency node to navigate to linked external library. +
 image:src/docs/asciidoc/images/usage.png[ opts="inline"]
 
 [NOTE]
-Install manually from https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-[here]
+Install manually by downloading from https://img.shields.io/jetbrains/plugin/d/11236.svg[here]
 or from IntelliJ  (search in repository by name `Reveal gradle dependency in external libraries tree.` )
 
