@@ -11,6 +11,6 @@ Right-click on gradle dependency node to navigate to linked external library. +
 image:src/docs/asciidoc/images/usage.png[ opts="inline"]
 
 [NOTE]
-Install manually by downloading from https://img.shields.io/jetbrains/plugin/d/11236.svg[here]
+Install manually by downloading from https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-[here]
 or from IntelliJ  (search in repository by name `Reveal gradle dependency in external libraries tree.` )
 
