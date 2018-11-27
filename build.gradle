@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.jvmlet.intellij'
-version '1.2.0-SNAPSHOT'
+version '1.2.0'
 
 sourceCompatibility = 1.8
 
@@ -17,13 +17,14 @@ dependencies {
 }
 
 intellij {
-    version '2018.2.4'
+    version '2018.3'
     plugins  = [ 'gradle']
 
 }
 patchPluginXml {
-    changeNotes """
-     Documentation """
+    changeNotes "Upgraded to 2018.3 version."
+    pluginDescription "Right-click on gradle dependency to navigate to linked external library."
+
 }
 def isRelease  = !(version ==~ /.*SNAPSHOT/)
 publishPlugin {

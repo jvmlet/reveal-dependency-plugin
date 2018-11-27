@@ -3,9 +3,7 @@
     <name>Reveal gradle dependency in external libraries tree.</name>
     <vendor email="furer.alexander@gmail.com" url="https://github.com/jvmlet/reveal-dependency-plugin">jvmlet</vendor>
     <category>Navigation</category>
-    <description><![CDATA[
-    Right-click on gradle dependency to navigate to linked external library.
-    ]]></description>
+
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
