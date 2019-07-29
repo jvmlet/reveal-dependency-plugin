@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.jvmlet.intellij'
-version '1.3.1-SNAPSHOT'
+version '1.3.1'
 
 sourceCompatibility = 1.8
 
@@ -17,12 +17,12 @@ dependencies {
 }
 
 intellij {
-    version '2019.1'
+    version '2019.2'
     plugins  = [ 'gradle']
 
 }
 patchPluginXml {
-    changeNotes "Upgraded to 2019.1 version."
+    changeNotes "Upgraded to 2019.2 version."
     pluginDescription "Right-click on gradle dependency to navigate to linked external library."
 
 }
