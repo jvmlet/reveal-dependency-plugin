@@ -56,21 +56,23 @@ public class Reveal extends ExternalSystemViewContributor {
             tree.addMouseListener(new PopupHandler() {
                 @Override
                 public void invokePopup(Component comp, int x, int y) {
-                    List<ExternalSystemNode> selectedNodes = externalProjectsView.getStructure().getSelectedNodes(tree, ExternalSystemNode.class);
+
                     AbstractProjectViewPane currentProjectViewPane = ProjectView.getInstance(externalProjectsView.getProject())
                             .getCurrentProjectViewPane();
-
 
                     Object root = currentProjectViewPane.getTree()
                             .getModel()
                             .getRoot();
+
                     if(DefaultMutableTreeNode.class.isInstance(root)){
+                        List<ExternalSystemNode> selectedNodes = externalProjectsView.getStructure().getSelectedNodes(tree, ExternalSystemNode.class);
+                        String mavenCoordinates  = selectedNodes.get(0).getName().replace("(*)","").trim(); // IDEA 2020.1 added " (*)" suffix for omitted dependency
                         DefaultMutableTreeNode found = TreeUtil.findNode(DefaultMutableTreeNode.class.cast(root), n -> {
                             if (n.getUserObject() instanceof NamedLibraryElementNode) {
                                 return NamedLibraryElementNode.class.cast(n.getUserObject())
                                         .getValue()
                                         .getName()
-                                        .contains(selectedNodes.get(0).getName());
+                                        .contains(mavenCoordinates);
                             }
                             return false;
                         });
