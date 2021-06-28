@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.jvmlet.intellij'
-version '1.3.8'
+version '1.3.9-SNAPSHOT'
 
 
 repositories {
@@ -19,6 +19,10 @@ intellij {
     version '2021.1'
     plugins  = [ 'gradle']
 
+
+}
+runIde{
+    jbrVersion ="11_0_2b159"
 }
 
 def isRelease  = !(version ==~ /.*SNAPSHOT/)

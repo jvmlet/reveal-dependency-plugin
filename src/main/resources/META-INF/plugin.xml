@@ -35,9 +35,38 @@
     <depends>org.jetbrains.plugins.gradle</depends>
 
 
+    <actions>
+        <action class="org.jvmlet.intellij.plugin.gradle.GradleTaskDependencyTree"
+                text="Dependency Tree"
+                id="TaskDependencyTree" description="Show task dependency tree">
+            <add-to-group group-id="ExternalSystemView.RunConfigurationMenu"
+                          anchor="before"
+                          relative-to-action="ExternalSystem.AssignRunConfigurationShortcut"/>
+        </action>
+
+        <action class="org.jvmlet.intellij.plugin.gradle.GradleTaskDependencyTree"
+                text="Dependency Tree"
+
+                id="TaskDependencyTree1" description="Show task dependency tree">
+            <add-to-group group-id="ExternalSystemView.TaskMenu" anchor="first" />
+<!--            <add-to-group group-id="ExternalSystemView.ActionsToolbar" anchor="first" />-->
+<!--            <add-to-group group-id="ExternalSystemView.RunConfigurationMenu" anchor="first" />-->
+<!--            <add-to-group group-id="ExternalSystemView.TaskActivationGroup" anchor="first" />-->
+        </action>
+
+
+
+
+
+
+    </actions>
+
     <extensions defaultExtensionNs="com.intellij">
         <externalSystemViewContributor implementation="org.jvmlet.intellij.plugin.gradle.reveal.Reveal"/>
     </extensions>
+
+
+
 
 
 </idea-plugin>
