@@ -5,11 +5,15 @@ image:https://travis-ci.com/jvmlet/reveal-dependency-plugin.svg?branch=master[Bu
 image:https://img.shields.io/jetbrains/plugin/d/11236.svg["JetBrains IntelliJ plugins",link="https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-"]
 image:https://img.shields.io/jetbrains/plugin/v/11236.svg["JetBrains IntelliJ plugins",link="https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-"]
 
-Right-click on gradle dependency node to navigate to linked external library. +
+* Right-click on gradle dependency node to navigate to linked external library. +
 *Works at any level of dependency hierarchy*
-
-
++
 image:src/docs/asciidoc/images/usage.png[ opts="inline"]
+
+* Right-click on gradle task, then *Dependency tree* to print task dependencies without executing the task. +
+*Works with several selected tasks.*
++
+image:src/docs/asciidoc/images/taskTree.jpg[ opts="inline"]
 
 [NOTE]
 Install manually by downloading from https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-[here]
