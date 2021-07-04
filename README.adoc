@@ -14,6 +14,8 @@ image:src/docs/asciidoc/images/usage.png[ opts="inline"]
 *Works with several selected tasks.*
 +
 image:src/docs/asciidoc/images/taskTree.jpg[ opts="inline"]
++
+Credits to https://github.com/dorongold/gradle-task-tree[Doron Gold]
 
 [NOTE]
 Install manually by downloading from https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-[here]
