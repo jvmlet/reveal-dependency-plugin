@@ -1,7 +1,7 @@
 = IntelliJ Idea plugin to reveal gradle dependency in external libraries tree.
 :icons: font
 
-image:https://travis-ci.com/jvmlet/reveal-dependency-plugin.svg?branch=master[Build Status,link=https://travis-ci.com/jvmlet/reveal-dependency-plugin]
+image:https://app.travis-ci.com/jvmlet/reveal-dependency-plugin.svg?branch=master[Build Status,link=https://app.travis-ci.com/jvmlet/reveal-dependency-plugin]
 image:https://img.shields.io/jetbrains/plugin/d/11236.svg["JetBrains IntelliJ plugins",link="https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-"]
 image:https://img.shields.io/jetbrains/plugin/v/11236.svg["JetBrains IntelliJ plugins",link="https://plugins.jetbrains.com/plugin/11236-reveal-gradle-dependency-in-external-libraries-tree-"]
 
