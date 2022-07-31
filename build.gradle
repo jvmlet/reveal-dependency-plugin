@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '1.5.3'
+    id 'org.jetbrains.intellij' version '1.7.0'
 }
 
 group 'org.jvmlet.intellij'
@@ -18,7 +18,7 @@ dependencies {
 intellij {
     version = '2022.2'
     plugins  = [ 'gradle']
-
+    instrumentCode = false
 
 }
 runIde{
