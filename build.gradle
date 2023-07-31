@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '1.13.3'
+    id 'org.jetbrains.intellij' version '1.15.0'
 }
 
 group 'org.jvmlet.intellij'
-version '1.4.0'
+version '1.4.1'
 
 
 repositories {
@@ -16,7 +16,7 @@ dependencies {
 }
 
 intellij {
-    version = '2023.1'
+    version = '2023.2'
     plugins  = [ 'gradle']
     instrumentCode = false
 
