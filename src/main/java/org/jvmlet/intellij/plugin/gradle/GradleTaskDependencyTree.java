@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.plugins.gradle.action.GradleExecuteTaskAction;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,7 +34,7 @@ public class GradleTaskDependencyTree extends AnAction {
     }
 
     public GradleTaskDependencyTree(@Nullable @NlsActions.ActionText String text,@Nullable @NlsActions.ActionText String description) {
-        super(()->text, ()->description ,null );
+        super(()->text, ()->description ,(Icon) null );
     }
 
 
