@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.jvmlet.intellij'
-version '1.4.2'
+version '1.4.3'
 
 
 repositories {
@@ -16,7 +16,7 @@ dependencies {
 }
 
 intellij {
-    version = '2023.3'
+    version = '2023.3.5'
     plugins  = [ 'gradle']
     instrumentCode = false
 
