@@ -4,7 +4,6 @@ import com.intellij.ide.projectView.ProjectView;
 import com.intellij.ide.projectView.impl.AbstractProjectViewPane;
 import com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode;
 import com.intellij.openapi.externalSystem.model.DataNode;
-import com.intellij.openapi.externalSystem.model.ExternalSystemDataKeys;
 import com.intellij.openapi.externalSystem.model.Key;
 import com.intellij.openapi.externalSystem.model.ProjectSystemId;
 import com.intellij.openapi.externalSystem.view.ExternalProjectsView;
@@ -49,10 +48,14 @@ public class Reveal extends ExternalSystemViewContributor {
     @Override
     public List<ExternalSystemNode<?>> createNodes(ExternalProjectsView externalProjectsView, MultiMap<Key<?>, DataNode<?>> dataNodes) {
 
-        if(externalProjectsView instanceof ExternalProjectsViewImpl){
-            SimpleTree tree = (SimpleTree) ExternalProjectsViewImpl.class.cast(externalProjectsView)
-                    .getData(ExternalSystemDataKeys.PROJECTS_TREE.getName());
 
+        if(externalProjectsView instanceof ExternalProjectsViewImpl){
+            GradleTreeGetter gradleTreeGetter = new GradleTreeGetter();
+            ExternalProjectsViewImpl.class.cast(externalProjectsView)
+                    .uiDataSnapshot(gradleTreeGetter);
+
+
+            SimpleTree tree = gradleTreeGetter.getSimpleTree();
             tree.addMouseListener(new PopupHandler() {
                 @Override
                 public void invokePopup(Component comp, int x, int y) {

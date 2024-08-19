@@ -1,32 +1,36 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '1.15.0'
+    id 'org.jetbrains.intellij.platform' version '2.0.1'
 }
 
 group 'org.jvmlet.intellij'
-version '1.5.0'
+version '1.6.0'
 
 
 repositories {
     mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
 dependencies {
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    intellijPlatform {
+        intellijIdeaCommunity('2024.2')
+        bundledPlugin 'com.intellij.gradle'
+    }
 }
 
-intellij {
-    version = '2024.1'
-    plugins  = [ 'gradle']
+intellijPlatform {
     instrumentCode = false
-
 }
 
-def isRelease  = !(version ==~ /.*SNAPSHOT/)
+def isRelease = !(version ==~ /.*SNAPSHOT/)
 publishPlugin {
     onlyIf {
         isRelease
     }
-    token =System.getenv("JETBRAINS_TOKEN")
+    token = System.getenv("JETBRAINS_TOKEN")
 }
 
