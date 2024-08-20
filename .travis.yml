@@ -14,4 +14,4 @@ after_success:
 #- "[[ ${TRAVIS_PULL_REQUEST} == 'false' ]] && [[ ${TRAVIS_BRANCH} == 'master' ]] && [[ ${TRAVIS_TAG} == '' ]] && ./gradlew uploadArchives"
 - ./gradlew publishPlugin
 script:
-  - ./gradlew check
+  - ./gradlew build

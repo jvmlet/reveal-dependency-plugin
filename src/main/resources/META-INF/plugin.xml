@@ -14,7 +14,7 @@
     </description>
     <change-notes><![CDATA[
       <ul>
-        <li>1.6.0 - Idea 2024.2</li>
+        <li>1.6.1 - Idea 2024.2</li>
         <li>1.5.0 - Idea 2024.1</li>
         <li>1.4.3 - Idea 2023.3.5</li>
         <li>1.4.2 - Idea 2023.3</li>
@@ -45,7 +45,7 @@
 
 
     <depends>com.intellij.modules.lang</depends>
-    <depends>org.jetbrains.plugins.gradle</depends>
+    <depends>com.intellij.gradle</depends>
 
 
     <actions>
@@ -61,25 +61,19 @@
                 text="Dependency Tree"
 
                 id="TaskDependencyTree1" description="Show task dependency tree">
-            <add-to-group group-id="ExternalSystemView.TaskMenu" anchor="first" />
-<!--            <add-to-group group-id="ExternalSystemView.ActionsToolbar" anchor="first" />-->
-<!--            <add-to-group group-id="ExternalSystemView.RunConfigurationMenu" anchor="first" />-->
-<!--            <add-to-group group-id="ExternalSystemView.TaskActivationGroup" anchor="first" />-->
+            <add-to-group group-id="ExternalSystemView.TaskMenu" anchor="first"/>
+            <!--            <add-to-group group-id="ExternalSystemView.ActionsToolbar" anchor="first" />-->
+            <!--            <add-to-group group-id="ExternalSystemView.RunConfigurationMenu" anchor="first" />-->
+            <!--            <add-to-group group-id="ExternalSystemView.TaskActivationGroup" anchor="first" />-->
+        </action>
+        <action class="org.jvmlet.intellij.plugin.gradle.reveal.RevealAction"
+                text="Reveal"
+                icon="AllIcons.Actions.Show"
+                id="Reveal" description="Reveal in dependencies">
+            <add-to-group group-id="ExternalSystemView.DependencyMenu" anchor="first"/>
         </action>
 
-
-
-
-
-
     </actions>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <externalSystemViewContributor implementation="org.jvmlet.intellij.plugin.gradle.reveal.Reveal"/>
-    </extensions>
-
-
-
 
 
 </idea-plugin>
