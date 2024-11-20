@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij.platform' version '2.0.1'
+    id 'org.jetbrains.intellij.platform' version '2.1.0'
 }
 
 group 'org.jvmlet.intellij'
@@ -17,8 +17,12 @@ repositories {
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     intellijPlatform {
-        intellijIdeaCommunity('2024.3')
+        create(
+                providers.gradleProperty("platformType"),
+                providers.gradleProperty("platformVersion")
+        )
         bundledPlugin 'com.intellij.gradle'
+        pluginVerifier()
     }
 }
 
@@ -29,6 +33,7 @@ intellijPlatform {
             untilBuild = provider { null }
         }
     }
+
 }
 
 def isRelease = !(version ==~ /.*SNAPSHOT/)
